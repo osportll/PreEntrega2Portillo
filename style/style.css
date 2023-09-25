@@ -8,6 +8,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -18,10 +20,10 @@ header {
 
 nav ul {
   list-style: none;
+  display: flex;
 }
 
 nav li {
-  display: inline;
   margin-right: 20px;
 }
 
@@ -32,12 +34,15 @@ nav a {
 }
 
 main {
-  max-width: 800px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ddd;
-  min-height: 100vh;
 }
 
 section {
@@ -60,20 +65,11 @@ p {
 }
 
 article img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
 }
 
-.about {
-  text-align: center;
-}
-
-section img {
-  max-width: 80%;
-  height: auto;
-}
-
-article {
+.product-details {
   text-align: center;
 }
 
@@ -96,65 +92,4 @@ footer {
 
 .return-to-top:hover {
   background-color: #555;
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-form input[type='text'],
-form input[type='email'],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-form input[type='radio'],
-form input[type='checkbox'] {
-  margin-right: 5px;
-}
-
-form button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #333;
-  color: #fff;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #ddd;
 }
