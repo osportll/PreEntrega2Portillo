@@ -12,19 +12,24 @@ body {
   flex-direction: column;
 }
 
-header {
+header,
+footer {
   background-color: #333;
   color: #fff;
   padding: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
 }
 
 nav li {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 nav a {
@@ -33,16 +38,25 @@ nav a {
   font-weight: bold;
 }
 
-main {
+.mainIndex,
+.mainAbout {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1200px;
   gap: 20px;
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ddd;
+}
+
+.about {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
 }
 
 section {
@@ -88,8 +102,15 @@ footer {
   background-color: #333;
   color: #fff;
   text-decoration: none;
+  z-index: 1;
 }
 
 .return-to-top:hover {
   background-color: #555;
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
 }
